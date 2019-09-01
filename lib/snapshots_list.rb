@@ -16,7 +16,7 @@ class SnapshotsList
   end
 
   def self.snapshot_paths
-    "#{base_dir}/*.json"
+    "/root/bitnodes/data/crawl/a0431619/*"
   end
 
   def self.snapshots_count

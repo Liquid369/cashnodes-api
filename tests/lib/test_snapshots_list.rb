@@ -6,7 +6,7 @@ describe SnapshotsList do
     it 'returns the first page' do
       Dir.mktmpdir  do |dir|
         20.times do |i|
-          open("#{dir}/#{i.to_s.rjust(2, "0")}.json", 'w') {|f| f.puts('hello')}
+          open("~/bitnodes/data/crawl/a0431619/#{i.to_s.rjust(2, "0")}.json", 'w') {|f| f.puts('hello')}
         end
         SnapshotsList.stub(:base_dir, dir) do
           snapshots = SnapshotsList.call()[:snapshots]
@@ -25,7 +25,7 @@ describe SnapshotsList do
     it 'returns the requested page' do
       Dir.mktmpdir  do |dir|
         15.times do |i|
-          open("#{dir}/#{i}.json", 'w') {|f| f.puts('hello')}
+          open("~/bitnodes/data/crawl/a0431619/#{i}.json", 'w') {|f| f.puts('hello')}
         end
         SnapshotsList.stub(:base_dir, dir) do
           snapshots = SnapshotsList.call(1)[:snapshots]

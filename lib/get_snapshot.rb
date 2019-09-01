@@ -15,7 +15,7 @@ class GetSnapshot
   end
 
   def self.snapshot_path(timestamp, logger=nil)
-    bdir = base_dir
+    bdir = "/root/bitnodes/data/crawl/a0431619"
     if !bdir
       return nil
     end
